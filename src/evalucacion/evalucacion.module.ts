@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { EvalucacionService } from './evalucacion.service';
 import { EvalucacionController } from './evalucacion.controller';

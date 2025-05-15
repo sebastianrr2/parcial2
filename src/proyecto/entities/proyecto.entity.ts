@@ -39,5 +39,6 @@ export class Proyecto {
 
   @OneToMany(() => Evalucacion, (evalucacion) => evalucacion.proyecto, { cascade: true })
   evaluaciones: Evalucacion[];
+  estudiantes: never[];
 }
 

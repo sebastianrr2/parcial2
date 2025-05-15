@@ -4,9 +4,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EstudianteModule } from './estudiante/estudiante.module';
 import { ProyectoModule } from './proyecto/proyecto.module';
-import { ProfesorModule } from './profesor/profesor.module';
+
 import { EvalucacionModule } from './evalucacion/evalucacion.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { ProfesorModule } from './profesor/profesor.module';
 
 @Module({
  imports: [EstudianteModule, ProyectoModule, ProfesorModule, EvalucacionModule,
@@ -17,7 +19,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
      username: 'postgres',
      password: 'sebas',
      database: 'parcial2',
-     entities: [EstudianteModule, ProyectoModule, ProfesorModule, EvalucacionModule],
+     entities: [__dirname + '/**/*.entity{.ts,.js}'],
      dropSchema: true,
      synchronize: true,
    }),
