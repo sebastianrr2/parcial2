@@ -36,10 +36,5 @@ export class EstudianteService {
     await this.estudianteRepo.remove(estudiante);
     return 'Estudiante eliminado correctamente';
   }
-
-  // Opcional: listar todos
-  async findAll(): Promise<Estudiante[]> {
-    return await this.estudianteRepo.find({ relations: ['proyectos'] });
-  }
 }
 
