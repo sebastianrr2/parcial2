@@ -2,6 +2,7 @@
 import { Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Proyecto } from '../../proyecto/entities/proyecto.entity';
 import { Profesor } from '../../profesor/entities/profesor.entity';
+import { Column } from 'typeorm';
 
 @Entity()
 export class Evalucacion {
@@ -13,6 +14,9 @@ export class Evalucacion {
 
   @ManyToOne(() => Profesor, (profesor) => profesor.evaluaciones, { eager: true })
   evaluador: Profesor;
+
+  @Column('float')
+  calificacion: number;
 }
 
 
