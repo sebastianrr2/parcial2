@@ -13,7 +13,7 @@ export class EstudianteController {
   }
 
   @Delete(':id')
-  async eliminar(@Param('id') id: string) {
+  async eliminar(@Param('id') id: number) {
     return await this.estudianteService.eliminarEstudiante(id);
   }
 }
