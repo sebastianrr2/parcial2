@@ -6,12 +6,11 @@ import { EvalucacionController } from './evalucacion.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Evalucacion } from './entities/evalucacion.entity';
 import { Proyecto } from '../proyecto/entities/proyecto.entity';
-import { ProfesorModule } from '../profesor/profesor.module'; // importa el módulo correcto
+import { Profesor } from '../profesor/entities/profesor.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Evalucacion, Proyecto]),
-    ProfesorModule, // <== esto permite que EvalucacionService use ProfesorService
+    TypeOrmModule.forFeature([Evalucacion, Proyecto, Profesor]), // Agregar Profesor
   ],
   controllers: [EvalucacionController],
   providers: [EvalucacionService],

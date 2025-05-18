@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 export class CreateEstudianteDto {
   nombre: string;
-  correo: string;
+  cedula: number;
   semestre: number;
   promedio: number;
 }

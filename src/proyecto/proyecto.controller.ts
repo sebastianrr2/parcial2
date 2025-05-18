@@ -21,12 +21,12 @@ export class ProyectoController {
   }
 
   
-  @Get(':id/estudiante')
-  async obtenerEstudiantePorProyecto(
-    @Param('id', ParseIntPipe) id: number,
-  ): Promise<Estudiante> {
-    return this.proyectoService.findEstudiantePorProyecto(id);
-  }
+  @Get(':id/estudiantes') // Cambiar a plural
+    async obtenerEstudiantesPorProyecto(
+      @Param('id', ParseIntPipe) id: number,
+    ): Promise<Estudiante[]> { // Cambiar a array
+      return this.proyectoService.findEstudiantesPorProyecto(id); // Cambiar nombre del método
+    }
 }
 
 

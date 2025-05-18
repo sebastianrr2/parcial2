@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 /* archivo src/shared/testing-utils/typeorm-testing-config.ts*/
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Estudiante } from 'src/estudiante/entities/estudiante.entity';
-import { Evalucacion } from 'src/evalucacion/entities/evalucacion.entity';
-import { Profesor } from 'src/profesor/entities/profesor.entity';
-import { Proyecto } from 'src/proyecto/entities/proyecto.entity';
+import { Estudiante } from '../../estudiante/entities/estudiante.entity';
+import { Evalucacion } from '../../evalucacion/entities/evalucacion.entity';
+import { Profesor } from '../../profesor/entities/profesor.entity';
+import { Proyecto } from '../../proyecto/entities/proyecto.entity';
 
 
 export const TypeOrmTestingConfig = () => [

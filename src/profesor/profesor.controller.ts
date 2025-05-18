@@ -1,8 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { ProfesorService } from './profesor.service';
-import { CreateEvalucacionDto } from 'src/evalucacion/dto/create-evalucacion.dto';
-import { UpdateProfesorDto } from './dto/update-profesor.dto';
 import { CreateProfesorDto } from './dto/create-profesor.dto';
 
 
@@ -19,10 +17,10 @@ export class ProfesorController {
   @Post('asignar-evaluador')
   @HttpCode(HttpStatus.CREATED)
   async asignarEvaluador(
-    @Body() body: { evaluacionDto: CreateEvalucacionDto; profesorDto: UpdateProfesorDto }
+    @Body() body: { proyectoId: number; evaluadorId: number; calificacion: number }
   ) {
-    const { evaluacionDto, profesorDto } = body;
-    return await this.profesorService.asignarEvaluador(evaluacionDto, profesorDto);
+    const { proyectoId, evaluadorId, calificacion } = body;
+    return await this.profesorService.asignarEvaluador(proyectoId, evaluadorId, calificacion);
   }
 }
 

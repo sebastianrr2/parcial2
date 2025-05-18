@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Post, Body, Delete, Param, ParseIntPipe } from '@nestjs/common';
+import { Controller, Post, Body, Delete, Param } from '@nestjs/common';
 import { EstudianteService } from './estudiante.service';
 import { CreateEstudianteDto } from './dto/create-estudiante.dto';
 
@@ -13,7 +13,7 @@ export class EstudianteController {
   }
 
   @Delete(':id')
-  async eliminar(@Param('id', ParseIntPipe) id: number) {
+  async eliminar(@Param('id') id: string) {
     return await this.estudianteService.eliminarEstudiante(id);
   }
 }

@@ -39,18 +39,23 @@ export class ProyectoService {
     return await this.proyectoRepo.save(proyecto);
   }
 
-async findEstudiantePorProyecto(id: number): Promise<Estudiante> {
-  const proyecto = await this.proyectoRepo.findOne({
-    where: { id },
-    relations: ['estudiante'], // Singular porque un proyecto tiene un solo estudiante
-  });
+async findEstudiantesPorProyecto(id: number): Promise<Estudiante[]> {
+    const proyecto = await this.proyectoRepo.findOne({
+      where: { id },
+      relations: ['lider'],
+    });
 
-  if (!proyecto) throw new NotFoundException('Proyecto no encontrado');
+    if (!proyecto) {
+      throw new NotFoundException('Proyecto no encontrado');
+    }
 
-  if (!proyecto.lider) throw new NotFoundException('El proyecto no tiene un estudiante asignado');
+    if (!proyecto.lider) {
+      throw new NotFoundException('El proyecto no tiene un líder asignado');
+    }
 
-  return proyecto.lider;
-}
+    // Retornar el líder como un array de un elemento
+    return [proyecto.lider];
+  }
 
 }
 

@@ -29,6 +29,7 @@ export class EstudianteService {
 
     if (!estudiante) throw new NotFoundException('Estudiante no encontrado');
 
+
     if (estudiante.proyectos && estudiante.proyectos.length > 0) {
       throw new BadRequestException('No se puede eliminar un estudiante con proyectos activos');
     }

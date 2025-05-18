@@ -9,7 +9,7 @@ export class UpdateProfesorDto extends PartialType(CreateProfesorDto) {
     nombre: string;
     cedula: number;
     departamento: string;
-    extencion: string;
+    extension: string;
     esParEvaluador: boolean;
     evalucaciones: Evalucacion[];
 }

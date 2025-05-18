@@ -34,7 +34,7 @@ export class Proyecto {
   @ManyToOne(() => Estudiante, (estudiante) => estudiante.proyectos, { eager: true })
   lider: Estudiante;
 
-  @ManyToOne(() => Profesor, (profesor) => profesor.proyectosMentor, { nullable: true, eager: true })
+  @ManyToOne(() => Profesor, (profesor) => profesor.proyectosMentor, {eager: true })
   mentor: Profesor;
 
   @OneToMany(() => Evalucacion, (evalucacion) => evalucacion.proyecto, { cascade: true })
