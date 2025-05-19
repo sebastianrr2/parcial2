@@ -28,6 +28,10 @@
 ## API REST POSTMAN Documentation
 
 [Documentación Completa API REST PARCIAL 2.pdf](https://github.com/user-attachments/files/20275566/Documentacion.Completa.API.REST.PARCIAL.2.pdf)
+1. Crear estudiante (para el líder)
+2. Crear profesores (mentor y evaluador)
+3. Crear proyecto (con líder y mentor válidos)
+4. Asignar evaluador (con proyecto y evaluador válidos)
 
 
 ## Project setup
