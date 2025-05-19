@@ -1,4 +1,4 @@
-<p align="center">
+[PARCIAL 2.postman_collection.json](https://github.com/user-attachments/files/20275693/PARCIAL.2.postman_collection.json)<p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
@@ -33,6 +33,8 @@
 3. Crear proyecto (con líder y mentor válidos)
 4. Asignar evaluador (con proyecto y evaluador válidos)
 
+## API REST POSTMAN Prueba
+[PARCIAL 2.postman_collection.json](https://github.com/user-attachments/files/20275697/PARCIAL.2.postman_collection.json)
 
 ## Project setup
 
